@@ -344,7 +344,7 @@ export default class PersonaQuote {
     this.nodes.photo = this.make('div', this.CSS.photo);
 
     if (photo) {
-      this.nodes.photo.style.background = `url('${photo}') center center / contain no-repeat`;
+      this.nodes.photo.style.background = `url('${photo.url}') center center / contain no-repeat`;
     }
 
     this.nodes.photo.addEventListener('click', () => {
@@ -406,7 +406,7 @@ export default class PersonaQuote {
       this.nodes.quote.innerHTML = option.dataset.about;
       this.nodes.position.innerHTML = option.dataset.regalia;
 
-      this.data.photo = option.dataset.photo;
+      this.data.photo.url = option.dataset.avatar;
     };
 
     this.nodes.personasSelect.addEventListener('change', function () {
