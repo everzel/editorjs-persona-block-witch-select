@@ -343,6 +343,8 @@ export default class PersonaQuote {
     // Photo
     this.nodes.photo = this.make('div', this.CSS.photo);
 
+    console.log(photo);
+    console.log(this.data);
     if (photo) {
       this.nodes.photo.style.background = `url('${photo.url}') center center / contain no-repeat`;
     }
