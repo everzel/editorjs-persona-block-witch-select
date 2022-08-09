@@ -408,7 +408,9 @@ export default class PersonaQuote {
       this.nodes.quote.innerHTML = option.dataset.about;
       this.nodes.position.innerHTML = option.dataset.regalia;
 
-      this.data.photo.url = option.dataset.avatar;
+      this.data.photo = {
+        url: option.dataset.photo
+      };
     };
 
     this.nodes.personasSelect.addEventListener('change', function () {
