@@ -344,7 +344,7 @@ export default class PersonaQuote {
     this.nodes.photo = this.make('div', this.CSS.photo);
 
     if (photo) {
-      this.nodes.photo.style.background = `url('${photo.url}') center center / contain no-repeat`;
+      this.nodes.photo.style.background = `url('${photo}') center center / contain no-repeat`;
     }
 
     this.nodes.photo.addEventListener('click', () => {
