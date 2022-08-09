@@ -389,7 +389,7 @@ export default class PersonaQuote {
       const option = this.make('option', null, {
         innerHTML: element.name
       }, {
-        'data-avatar': element.avatar,
+        'data-photo': element.photo,
         'data-name': element.name,
         'data-regalia': element.regalia,
         'data-about': element.about
@@ -399,14 +399,14 @@ export default class PersonaQuote {
     });
 
     const callbackSelect = (option) => {
-      this.nodes.photo.style.background = 'url(' + option.dataset.avatar + ') center center no-repeat';
+      this.nodes.photo.style.background = 'url(' + option.dataset.photo + ') center center no-repeat';
       this.nodes.photo.style.backgroundSize = 'cover';
 
       this.nodes.name.innerHTML = option.dataset.name;
       this.nodes.quote.innerHTML = option.dataset.about;
       this.nodes.position.innerHTML = option.dataset.regalia;
 
-      this.data.photo = option.dataset.avatar;
+      this.data.photo = option.dataset.photo;
     };
 
     this.nodes.personasSelect.addEventListener('change', function () {
