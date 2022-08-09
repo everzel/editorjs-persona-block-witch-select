@@ -389,7 +389,7 @@ export default class PersonaQuote {
       const option = this.make('option', null, {
         innerHTML: element.name
       }, {
-        'data-photo': element.photo,
+        'data-photo': element.photo.url,
         'data-name': element.name,
         'data-regalia': element.regalia,
         'data-about': element.about
