@@ -394,7 +394,8 @@ export default class PersonaQuote {
         'data-photo': element.photo.url,
         'data-name': element.name,
         'data-regalia': element.regalia,
-        'data-about': element.about
+        'data-about': element.about,
+        'data-id': element.id
       });
 
       this.nodes.personasSelect.appendChild(option);
@@ -411,6 +412,7 @@ export default class PersonaQuote {
       this.data.photo = {
         url: option.dataset.photo
       };
+      this.data.personaId = option.dataset.id;
     };
 
     this.nodes.personasSelect.addEventListener('change', function () {
